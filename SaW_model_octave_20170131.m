@@ -155,6 +155,8 @@ set (main_fig, "visible", "off");
 print(main_fig, sprintf("performance_%i_%i_%i.pdf",W/1e9,gm/1e6,round(mg*100)),"-dpdf");
 set (main_fig, "visible", "on");
 
+[M,I] = min(Cs)
+
 fprintf('Cm :%i\nCt :%i\nCp :%i\nCgm:%i\nCgt:%i\nCgp:%i\nCT :%d\nCs :%i\n',round(Cm(pos)),round(Ct(pos)),round(Cp(pos)),round(Cgm(pos)),...
     round(Cgt(pos)),round(Cgp(pos)),round(CT(pos)),round(Cs(pos)))
 %dist_fig = figure();
